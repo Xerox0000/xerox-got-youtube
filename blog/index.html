@@ -10,14 +10,18 @@
         req.open("GET", "/answer?q="+document.getElementById('word').value);
         req.send();}
     }</script>
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "kbwgtmi4yf");
+</script>
 </head>
     英単語のレベルを出します。<br>
     その単語が文脈から判断するべき単語か、覚えておくべき単語かの参考にしてください。<br>
     <input id="word" type="text"></input><input type="button" onClick="getlevel()">確認</input>
     <div id="info">
-    <!-- [FC2 Analyzer] //analyzer.fc2.com/  -->
-<script language="javascript" src="https://analyzer54.fc2.com/ana/processor.php?uid=2906664" type="text/javascript"></script>
-<noscript><div align="right"><img src="https://analyzer54.fc2.com/ana/icon.php?uid=2906664&ref=&href=&wid=0&hei=0&col=0" /></div></noscript>
-<!-- [FC2 Analyzer]  -->
+    
 </body>
 </html>

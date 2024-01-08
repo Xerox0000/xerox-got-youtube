@@ -43,11 +43,11 @@ window.onload = () => {
     <body>
 
 
-<button id="btn">掲示板</button>
+<button id="btn1">掲示板</button>
 <script>
-var btn = document.getElementById('btn');
+var btn1 = document.getElementById('btn1');
 
-btn.addEventListener('click', function() {
+btn1.addEventListener('click', function() {
     location.href="/bbs"
 })
 </script>
@@ -56,7 +56,14 @@ btn.addEventListener('click', function() {
     <br>
     <a href="
 https://www.seaart.ai/s/26PmeH" >探してたらたまたま見つけた画像生成AI</a>
-    
+    <button id="btn">お知らせ</button>
+    <script>
+var btn = document.getElementById('btn');
+
+btn.addEventListener('click', function() {
+    window.open("/blog/t.html", '_blank', 'width=500, height=100')
+})
+</script>
     <body class="no-theme">
         <div class="pure-g h-box" id="search-widget">
             <div class="pure-u-1" id="logo">

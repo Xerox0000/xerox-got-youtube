@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: yus-z
+    name: smy
     env: python
     region: Oregon
     plan: free

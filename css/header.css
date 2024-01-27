@@ -8,3 +8,4 @@ header {
   background: #eee;
   box-sizing: border-box;
 }
+header { visibility: visible; }

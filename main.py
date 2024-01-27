@@ -305,10 +305,19 @@ def page(request: Request,__):
 @app.exception_handler(APItimeoutError)
 def APIwait(request: Request,exception: APItimeoutError):
     return template("APIwait.html",{"request": request},status_code=500)
+
 @app.get("/updateinfo", response_class=HTMLResponse)
 def home(response: Response,request: Request,yuki: Union[str] = Cookie(None)):
     if check_cokie(yuki):
         response.set_cookie("yuki","True",max_age=60 * 60 * 24 * 7)
         return template("apd.html",{"request": request})
+    print(check_cokie(yuki))
+    return redirect("/word")
+
+@app.get("/instance", response_class=HTMLResponse)
+def home(response: Response,request: Request,yuki: Union[str] = Cookie(None)):
+    if check_cokie(yuki):
+        response.set_cookie("yuki","True",max_age=60 * 60 * 24 * 7)
+        return template("ins.html",{"request": request})
     print(check_cokie(yuki))
     return redirect("/word")

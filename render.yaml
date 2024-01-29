@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: scratch-sm-y
+    name: 雪
     env: python
     region: Oregon
     plan: free

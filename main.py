@@ -328,3 +328,18 @@ def home(response: Response,request: Request,yuki: Union[str] = Cookie(None)):
         return template("build.html",{"request": request})
     print(check_cokie(yuki))
     return redirect("/word")
+
+@app.get("/v", response_class=HTMLResponse)
+def home(response: Response,request: Request,yuki: Union[str] = Cookie(None)):
+    if check_cokie(vip):
+        response.set_cookie("vip","True",max_age=60 * 60 * 24 * 7)
+        return template("home-v.html",{"request": request})
+    print(check_cokie(vip))
+    return redirect("/word")
+
+@app.get("/search-v", response_class=HTMLResponse,)
+def search(q:str,response: Response,request: Request,page:Union[int,None]=1,yuki: Union[str] = Cookie(None),proxy: Union[str] = Cookie(None)):
+    if not(check_cokie(vip)):
+        return redirect("/")
+    response.set_cookie("vip","True",max_age=60 * 60 * 24 * 7)
+    return template("search-v.html", {"request": request,"results":get_search(q,page),"word":q,"next":f"/search-v?q={q}&page={page + 1}","proxy":proxy})

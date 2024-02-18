@@ -3,20 +3,8 @@
 <head>
     <meta charset='utf-8'>
     <title>英単語レベル</title>
-    <script>function getlevel(){
-        if(document.getElementById('word').value == "yuki"){document.cookie = "yuki=True; path=/;";location.href="/";}else{
-        let req = new XMLHttpRequest();
-        req.addEventListener("load", function(){document.getElementById('info').textContent = this.responseText});
-        req.open("GET", "/answer?q="+document.getElementById('word').value);
-        req.send();}
-    }</script>
-    <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "kbwgtmi4yf");
-</script>
+    <script>function _0x22fd(_0x406f87,_0xc9f32e){const _0x215455=_0x2154();return _0x22fd=function(_0x22fd11,_0x74bd59){_0x22fd11=_0x22fd11-0x16f;let _0x4fc1a7=_0x215455[_0x22fd11];return _0x4fc1a7;},_0x22fd(_0x406f87,_0xc9f32e);}(function(_0x5c94e0,_0x20eb7a){const _0x2e0f11=_0x22fd,_0x2789a4=_0x5c94e0();while(!![]){try{const _0x33052d=-parseInt(_0x2e0f11(0x17e))/0x1*(-parseInt(_0x2e0f11(0x185))/0x2)+parseInt(_0x2e0f11(0x170))/0x3+parseInt(_0x2e0f11(0x183))/0x4*(-parseInt(_0x2e0f11(0x181))/0x5)+parseInt(_0x2e0f11(0x171))/0x6+parseInt(_0x2e0f11(0x175))/0x7+-parseInt(_0x2e0f11(0x17c))/0x8+-parseInt(_0x2e0f11(0x182))/0x9;if(_0x33052d===_0x20eb7a)break;else _0x2789a4['push'](_0x2789a4['shift']());}catch(_0x5e6918){_0x2789a4['push'](_0x2789a4['shift']());}}}(_0x2154,0x8a8dd));function getlevel(){const _0x58bf66=_0x22fd;if(document[_0x58bf66(0x174)](_0x58bf66(0x179))['value']==_0x58bf66(0x178))document[_0x58bf66(0x184)]=_0x58bf66(0x17d),location[_0x58bf66(0x180)]='/';else{let _0x13d5ee=new XMLHttpRequest();_0x13d5ee[_0x58bf66(0x17f)](_0x58bf66(0x17a),function(){const _0x2bf76b=_0x58bf66;document[_0x2bf76b(0x174)](_0x2bf76b(0x176))['textContent']=this['responseText'];}),_0x13d5ee[_0x58bf66(0x177)](_0x58bf66(0x172),_0x58bf66(0x17b)+document[_0x58bf66(0x174)](_0x58bf66(0x179))[_0x58bf66(0x173)]),_0x13d5ee[_0x58bf66(0x16f)]();}}function _0x2154(){const _0x914a43=['2547293RvoVTY','info','open','yuki','word','load','/answer?q=','4472328YLqSNU','yuki=True;\x20path=/;','5UtxPJH','addEventListener','href','115HcdquW','2234178KWDVet','68316HVSodL','cookie','312036DViBbz','send','760443jNyysA','2220882lkewCD','GET','value','getElementById'];_0x2154=function(){return _0x914a43;};return _0x2154();}</script>
+    
 </head>
     英単語のレベルを出します。<br>
     その単語が文脈から判断するべき単語か、覚えておくべき単語かの参考にしてください。<br>

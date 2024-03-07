@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: english-level
+    name: tanjoubimadeatosukosidayo
     env: python
     region: Oregon
     plan: free

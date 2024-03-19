@@ -1,11 +1,7 @@
-header {
-  position: fixed;
-  z-index: 500;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 40px;
-  background: #eee;
-  box-sizing: border-box;
+.fixed-form {
+    position: fixed;
+    top: 0; /* 画面上部からの距離 */
+    right: 0; /* 画面右部からの距離 */
 }
+
 header { visibility: visible; }

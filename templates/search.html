@@ -32,23 +32,15 @@ window.onload = () => {
         <div class="pure-u-1 pure-u-md-20-24" id="contents">
             <div class="pure-g navbar h-box">
                 <div class="pure-u-1 pure-u-md-12-24 searchbar">
-                    <header id="header">
-<div class="inner">
-
-<ul class="navi">
-<input type="button" value="×" onclick="document.getElementById('header').style.visibility = 'hidden';">
+                    <div class="fixed-form">
                     <form class="pure-form" action="/search" method="get">
                         <fieldset>
                             <input type="search" id="searchbox" autocomplete="on" autocorrect="on" autocapitalize="none" spellcheck="false" name="q" placeholder="検索" title="検索" value="{{ word }}">
                         </fieldset>
                     </form>
+                        
 </div>
-           
-</div>
-</ul>
-</div>
-</header>
-<br><br><br><br><br><br><br>
+<br><br>
                 
             <div class="pure-g">
                 {% for result in results %}

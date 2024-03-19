@@ -19,11 +19,7 @@
 <script src="https://accaii.com/sumikaze/script.js" async></script><noscript><img src="//accaii.com/sumikaze/script?guid=on"></noscript>
 <!-- FC2カウンター ここから --><script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=89505886"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=89505886" /></noscript><!-- FC2カウンター ここまで --><!-- FC2カウンター ここから -->
 同時接続数:<script language="javascript" type="text/javascript" src="//counter1.fc2.com/views.php?id=89505886"></script><noscript><img src="//counter1.fc2.com/counter_now.php?id=89505886" /></noscript> <a href="/instance" >インスタンス一覧　</a><a href="/build" >インスタンス作成方法</a><a href="https://scratch.mit.edu/" >　スクラッチでインスタンスの拡散してくれる人募集中,勝手に拡散しOK</a>
-    <header id="header">
-<div class="inner">
-<div id="adspace">
-<ul class="navi">
-<input type="button" value="×" onclick="document.getElementById('header').style.visibility = 'hidden';">
+    
 
 
 <script>
@@ -40,18 +36,24 @@ window.onload = () => {
         <div class="pure-u-1 pure-u-md-20-24" id="contents">
             <div class="pure-g navbar h-box">
                 <div class="pure-u-1 pure-u-md-12-24 searchbar">
+                    <header id="header">
+<div class="inner">
+<div id="adspace">
+<ul class="navi">
+<input type="button" value="×" onclick="document.getElementById('header').style.visibility = 'hidden';">
                     <form class="pure-form" action="/search" method="get">
                         <fieldset>
                             <input type="search" id="searchbox" autocomplete="on" autocorrect="on" autocapitalize="none" spellcheck="false" name="q" placeholder="検索" title="検索" value="{{ word }}">
                         </fieldset>
                     </form>
-                </div>
-            </div>
-            </div>
+</div>
+</div>            
+</div>
 </ul>
 </div>
 </header>
 <br><br><br><br><br><br><br>
+                
             <div class="pure-g">
                 {% for result in results %}
                 <div class="pure-u-1 pure-u-md-1-4">

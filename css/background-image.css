@@ -1,1 +1,12 @@
+@keyframes colorChange {
+  0% {background-position: 100%;}
+  100% {background-position: 0%;}
+}
 
+.yukiyoutube {
+  background: linear-gradient(90deg, aqua, pink);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: colorChange 5s linear infinite;
+}

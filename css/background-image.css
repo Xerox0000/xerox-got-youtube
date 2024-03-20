@@ -13,4 +13,9 @@
 .yukiyoutube {
     font-weight: bold;
 }
+.yukiyoutube {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
 

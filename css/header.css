@@ -1,7 +1,9 @@
 .fixed-form {
     position: fixed;
     top: 0; /* 画面上部からの距離 */
-    right: 0; /* 画面右部からの距離 */
+    left: 50%; /* 画面の中心に配置 */
+    transform: translateX(-50%); /* 自身の幅の半分だけ左にずらす */
+    z-index: 9999; /* 一般的には大きな値を設定して他の要素より前面にする */
 }
 
 header { visibility: visible; }

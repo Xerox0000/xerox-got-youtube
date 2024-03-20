@@ -4,11 +4,29 @@
 }
 
 .yukiyoutube {
-  background: linear-gradient(90deg, aqua, pink);
-  background-clip: text;
+  display: inline-block;
+  font-size: 28px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  background-image: linear-gradient(45deg, #7e6b37 0%, #e8dbb8 50%, #eec148 90%);
+  background-size: 300% 100%;
   -webkit-background-clip: text;
-  color: transparent;
-  animation: colorChange 2s linear infinite;
+  -webkit-text-fill-color: transparent;
+  animation-name: gradationTextAnimation;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes gradationTextAnimation{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 100% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
 }
 .yukiyoutube {
     font-weight: bold;

@@ -8,7 +8,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  animation: colorChange 5s linear infinite;
+  animation: colorChange 2s linear infinite;
 }
 .yukiyoutube {
     font-weight: bold;

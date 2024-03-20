@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: tanjoubimadeatosukosidayo
+    name: nyanyanyacat
     env: python
     region: Oregon
     plan: free

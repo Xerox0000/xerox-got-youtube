@@ -11,8 +11,18 @@
             
         };
     </script>
+    <style>
+        /* コンテナを画面の中央に配置 */
+        .recaptcha-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* ビューポートの高さに合わせる */
+        }
+    </style>
 </head>
 <body>
+ <div class="recaptcha-container">
     <form action="?" method="POST">
         <div class="g-recaptcha" data-sitekey="6LeJlbkpAAAAACjwWbSMtkGdX4kXH1Q4ay3qf2A9" data-callback="onSuccess"></div>
         <br/>
@@ -29,5 +39,6 @@
     <!-- FC2カウンター ここから -->
 <script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=89505886"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=89505886" /></noscript>
 <!-- FC2カウンター ここまで -->
+ </div>
 </body>
 </html>

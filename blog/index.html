@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>reCAPTCHAデモ</title>
+    <title>認証ページ</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script type="text/javascript">
         var onSuccess = function(response) {
             console.log('認証成功:', response);
             alert('認証に成功、人間であるということが証明されました');
             document.cookie = "yuki=True; path=/;";
-            indow.location.href('/')
+            
         };
     </script>
 </head>
@@ -16,7 +16,18 @@
     <form action="?" method="POST">
         <div class="g-recaptcha" data-sitekey="6LeJlbkpAAAAACjwWbSMtkGdX4kXH1Q4ay3qf2A9" data-callback="onSuccess"></div>
         <br/>
-        <input type="submit" value="送信">
+        
     </form>
+    <script>
+        const BUTTON_CLICK_EVENT= document.getElementById('test1');
+        BUTTON_CLICK_EVENT.addEventListener('click', () => {
+            indow.location.href('/');
+        });
+    </script>
+    <button id="test1">認証が成功したらクリックしてください</button><br>
+    <p>重要:意味のない認証は禁止します、一度認証したらまた認証するのはやめてください</p>
+    <!-- FC2カウンター ここから -->
+<script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=89505886"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=89505886" /></noscript>
+<!-- FC2カウンター ここまで -->
 </body>
 </html>

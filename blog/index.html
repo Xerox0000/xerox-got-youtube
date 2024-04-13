@@ -20,6 +20,15 @@
             height: 100vh; /* ビューポートの高さに合わせる */
         }
     </style>
+    <style>
+        /* コンテナを画面の中央に配置 */
+        .t {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* ビューポートの高さに合わせる */
+        }
+    </style>
 </head>
 <body>
  <div class="recaptcha-container">
@@ -28,14 +37,10 @@
         <br/>
         
     </form>
-    <script>
-        const BUTTON_CLICK_EVENT= document.getElementById('test1');
-        BUTTON_CLICK_EVENT.addEventListener('click', () => {
-            path=/;
-        });
-    </script>
-    <button id="test1">URLの「word」を削除してください</button><br>
-    <p>重要:意味のない認証は禁止します、一度認証したらまた認証するのはやめてください</p>
+ </div>
+    <br>
+    
+    <p>URLの「word」を削除してください<br>重要:意味のない認証は禁止します、一度認証したらまた認証するのはやめてください</p>
     <!-- FC2カウンター ここから -->
 <script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=89505886"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=89505886" /></noscript>
 <!-- FC2カウンター ここまで -->

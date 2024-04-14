@@ -9,6 +9,7 @@
             alert('');
             document.cookie = "yuki=True; path=/;";
             
+            
         };
     </script>
     <script src="https://js.hcaptcha.com/1/api.js?hl=ja" async defer></script>
@@ -16,8 +17,9 @@
 
     <script>
         function onSuccess(token) {
-    console.log("認証に成功、人間であるということが証明されました", token);
+    alert("認証に成功、人間であるということが証明されました", token);
     document.cookie = "yuki=True; path=/;";
+    window.location.href('/')
     }
     </script>
     <style>

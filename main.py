@@ -170,7 +170,7 @@ from typing import Union
 
 app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
 app.mount("/css", StaticFiles(directory="./css"), name="static")
-app.mount("/word", StaticFiles(directory="./blog", html=True), name="static")
+
 app.add_middleware(GZipMiddleware, minimum_size=1000)
 
 from fastapi.templating import Jinja2Templates
@@ -178,10 +178,7 @@ template = Jinja2Templates(directory='templates').TemplateResponse
 
 
 
-@app.get("/word", response_class=HTMLResponse)
-def home(response: Response,request: Request,yuki: Union[str] = Cookie(None)):
-    if check_cokie(yuki):
-        return template("word.html",{"token": token})
+
 
 @app.get("/", response_class=HTMLResponse)
 def home(response: Response,request: Request,yuki: Union[str] = Cookie(None)):
@@ -345,3 +342,7 @@ def search(q:str,response: Response,request: Request,page:Union[int,None]=1,yuki
         return redirect("/")
     response.set_cookie("vip","True",max_age=60 * 60 * 24 * 7)
     return template("search-v.html", {"request": request,"results":get_search(q,page),"word":q,"next":f"/search-v?q={q}&page={page + 1}","proxy":proxy})
+@app.get("/word", response_class=HTMLResponse)
+def home(response: Response,request: Request,yuki: Union[str] = Cookie(None)):
+    if check_cokie(yuki):
+        return template("word.html",{"request": request,"token": token})

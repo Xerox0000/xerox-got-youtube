@@ -344,5 +344,4 @@ def search(q:str,response: Response,request: Request,page:Union[int,None]=1,yuki
     return template("search-v.html", {"request": request,"results":get_search(q,page),"word":q,"next":f"/search-v?q={q}&page={page + 1}","proxy":proxy})
 @app.get("/word", response_class=HTMLResponse)
 def home(response: Response,request: Request,yuki: Union[str] = Cookie(None)):
-    if check_cokie(yuki):
-        return template("word.html",{"request": request,"token": token})
+    return template("word.html",{"request": request,"token": token})

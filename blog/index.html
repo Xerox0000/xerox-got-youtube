@@ -11,6 +11,9 @@
             
         };
     </script>
+    <script src="https://js.hcaptcha.com/1/api.js?hl=fr" async defer></script>
+
+
     <script>
         function onSuccess(token) {
     console.log("認証に成功、人間であるということが証明されました", token);
@@ -38,7 +41,7 @@
 </head>
 <body>
  <div class="recaptcha-container">
-    <div class="h-captcha" data-sitekey="{{token}}" data-callback="onSuccess"></div>
+    <div class="h-captcha" data-sitekey="e4f5c13f-4f31-4ae1-ac5c-b3f1df232073" data-callback="onSuccess"></div>
     <p>URLの「word」を削除してください<br>重要:意味のない認証は禁止します、一度認証したらまた認証するのはやめてください</p>
  </div>
     <br>

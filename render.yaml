@@ -1,8 +1,14 @@
+# Exported from Render on 2024-04-14T03:18:49Z
 services:
-  - type: web
-    name: nyanyanyacat
-    env: python
-    region: Oregon
-    plan: free
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "uvicorn --port $PORT --host 0.0.0.0 main:app"
+- type: web
+  name: nyanyanyacat
+  runtime: python
+  repo: https://github.com/Skype-GitHub/YUKI-GOD
+  plan: free
+  envVars:
+  - key: hcaptcha
+    sync: false
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: uvicorn --port $PORT --host 0.0.0.0 main:app
+version: "1"

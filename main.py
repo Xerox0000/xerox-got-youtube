@@ -178,6 +178,10 @@ template = Jinja2Templates(directory='templates').TemplateResponse
 
 
 
+@app.get("/word", response_class=HTMLResponse)
+def home(response: Response,request: Request,yuki: Union[str] = Cookie(None)):
+    if check_cokie(yuki):
+        return template("word.html",{"token": token})
 
 @app.get("/", response_class=HTMLResponse)
 def home(response: Response,request: Request,yuki: Union[str] = Cookie(None)):

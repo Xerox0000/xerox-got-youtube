@@ -6,10 +6,16 @@
     <script type="text/javascript">
         var onSuccess = function(response) {
             console.log('認証成功:', response);
-            alert('認証に成功、人間であるということが証明されました');
+            alert('');
             document.cookie = "yuki=True; path=/;";
             
         };
+    </script>
+    <script>
+        function onSuccess(token) {
+    console.log("認証に成功、人間であるということが証明されました", token);
+    document.cookie = "yuki=True; path=/;";
+    }
     </script>
     <style>
         /* コンテナを画面の中央に配置 */

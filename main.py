@@ -7,7 +7,7 @@ import random
 import os
 from cache import cache
 
-
+token = my_secret = os.environ['hcaptcha']
 max_api_wait_time = 3
 max_time = 10
 apis = [r"https://youtube.076.ne.jp/",r"https://vid.puffyan.us/",r"https://inv.riverside.rocks/",r"https://invidio.xamh.de/",r"https://y.com.sb/",r"https://invidious.sethforprivacy.com/",r"https://invidious.tiekoetter.com/",r"https://inv.bp.projectsegfau.lt/",r"https://inv.vern.cc/",r"https://invidious.nerdvpn.de/",r"https://inv.privacy.com.de/",r"https://invidious.rhyshl.live/",r"https://invidious.slipfox.xyz/",r"https://invidious.weblibre.org/",r"https://invidious.namazso.eu/"]
@@ -170,7 +170,7 @@ from typing import Union
 
 app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
 app.mount("/css", StaticFiles(directory="./css"), name="static")
-app.mount("/word", StaticFiles(directory="./blog", html=True), name="static")
+
 app.add_middleware(GZipMiddleware, minimum_size=1000)
 
 from fastapi.templating import Jinja2Templates
@@ -179,6 +179,12 @@ template = Jinja2Templates(directory='templates').TemplateResponse
 
 
 
+@app.get("/word", response_class=HTMLResponse)
+def home(response: Response,request: Request,yuki: Union[str] = Cookie(None)):
+    if check_cokie(yuki):
+        response.set_cookie("yuki","True",max_age=60 * 60 * 24 * 7)
+        return template("index.html",{"token": token})
+    print(check_cokie(yuki))
 
 
 @app.get("/", response_class=HTMLResponse)
